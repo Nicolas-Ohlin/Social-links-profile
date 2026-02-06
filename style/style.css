@@ -73,7 +73,7 @@ p {
   align-items: center; 
 }
 .btn-section button {
-  background-color: var(--Grey-800);
+  background-color: var(--Grey-700);
   color: var(--White);
   border: none;
   padding: 12px 20px;
