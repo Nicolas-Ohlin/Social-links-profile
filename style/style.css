@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root{
+  --Green: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-700: hsl(0, 0%, 20%);
+  --Grey-800: hsl(0, 0%, 12%);
+  --Grey-900: hsl(0, 0%, 8%);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  padding: clamp(20px, 5vw, 70px);
+  background-color: var(--Grey-900);
+  font-family: 'Inter', sans-serif;
+  color: var(--White);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(360px, 90%);
+  max-width: 360px;
+  margin: 40px auto;
+  padding: 1.6rem;
+  border-radius: 15px;
+  background-color: var(--Grey-700);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+
+.profile-picture {
+  width: clamp(80px, 14vw, 120px);
+  height: clamp(80px, 14vw, 120px);
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  display: block;
+}
+
+
+h2 {
+  margin: 8px 0 6px;
+  font-weight: 700;
+  text-align: center;
+}
+h3 {
+  color: var(--Green);
+  margin: 0 0 10px;
+  font-size: 14px;
+  text-align: center;
+}
+p {
+  font-size: 14px;
+  margin: 14px 0 18px;
+  text-align: center;
+  color: var(--White);
+}
+
+
+.btn-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+  align-items: center; 
+}
+.btn-section button {
+  background-color: var(--Grey-800);
+  color: var(--White);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 320px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, transform 120ms ease;
+}
+.btn-section button:hover {
+  background-color: var(--Green);
+  color: var(--Grey-900);
+  transform: translateY(-2px);
+}
+
+
+.attribution {
+  font-size: 11px;
+  margin-top: 14px;
+  text-align: center;
+}
+.attribution a { 
+    color: var(--White); 
+}
+.attribution a:hover { 
+    color: var(--Green); 
+}
+
+/* Smaller screens  */
+@media (max-width: 375px) {
+  .main {
+    padding: 1rem;
+    margin: 16px auto;
+  }
+  h2 { font-size: 20px; }
+  .btn-section button { 
+    padding: 10px 14px; 
+    border-radius: 6px; 
+    }
+}
+
+/* Larger screens */
+@media (min-width: 900px) {
+  body { 
+    padding-top: 80px; 
+    padding-bottom: 80px; 
+}
+  .main {
+    margin: 80px auto;
+  }
+}
